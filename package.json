@@ -1,0 +1,13 @@
+{
+  "name": "yak-note",
+  "version": "1.0.0",
+  "description": "just a note",
+  "scripts": {
+    "write": "node ./scripts/update-redeme.js"
+  },
+  "keywords": [
+    "note"
+  ],
+  "author": "bee1an",
+  "license": "ISC"
+}
