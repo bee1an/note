@@ -8,4 +8,12 @@
 
 - [✍️ 随手记](src/jot-down.md)
 
-- [🧩 关于包管理器(npm,yarn,pnpm)](src/package-manager.md)
+- [🧩 关于包管理器](src/package-manager.md)
+
+- [🚀 关于发布](src/publish.md)
+
+- [❓ Q&A](src/QA.md)
+
+- [🔧 关于 ts](src/ts.md)
+
+- [预期之外的](src/unexpected.md)
