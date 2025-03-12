@@ -9,3 +9,9 @@
 **Q: 为什么需要 rolldown**
 
 rust 编写, 统一了 `rollup` 和 `esbuild` 可能存在的差异, 集成两者的优点, `vite` 底层会重构为 `rolldown` 编译和打包
+
+**Q: isNaN 和 Number.isNaN 的区别**
+
+`isNaN` 会先将参数转换为数字, 然后再判断是否为 `NaN`
+
+`Number.isNaN` 会直接判断参数是否为 `NaN`
