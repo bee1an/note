@@ -4,7 +4,7 @@
 
 [有趣的 git 网站](https://learngitbranching.js.org/?locale=zh_CN)
 
-- 创建一个新的本地仓库关联远程仓库
+#### 创建一个新的本地仓库关联远程仓库
 
 ```bash
 # 初始化一个仓库
@@ -18,4 +18,41 @@ git branch -M main
 git remote add origin 远端仓库地址
 # -u 表示设置上游关联（后续可直接用 git push 代替完整命令）
 git push -u origin main
+```
+
+#### 解决 git push 403 错误
+
+错误原因: git 所设端口与系统代理不一致
+
+1. 进入网络设置查看代理端口
+
+2. 配置 git 代理端口为系统代理端口
+
+```bash
+git config --global http.proxy 系统代理
+git config --global https.proxy 系统代理
+```
+
+其他命令
+
+```bash
+# 查看 git 代理配置
+git config --global http.proxy
+git config --global https.proxy
+
+# 取消代理
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+```
+
+#### git 用户和邮箱
+
+```bash
+# 查看 git 用户名和邮箱
+git config --global user.name
+git config --global user.email
+
+# 设置 git 用户名和邮箱
+git config --global user.name "username"
+git config --global user.email "email"
 ```
