@@ -12,8 +12,8 @@
 
 - [🚀 关于发布](src/publish.md)
 
-- [❓ Q&A](src/QA.md)
+- [💬 Q&A](src/QA.md)
 
 - [🔧 关于 ts](src/ts.md)
 
-- [预期之外的](src/unexpected.md)
+- [❓ 预期之外的](src/unexpected.md)
