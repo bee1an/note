@@ -8,6 +8,13 @@
 
 规范 git commit 的库, 需要一个[适配器](https://github.com/commitizen/cz-conventional-changelog)
 
+推荐使用[cz-git](https://cz-git.qbb.sh/zh/)
+
+- 更好的图标支持
+- 更友好的文档
+
+> 下面例子使用的是 `cz-conventional-changelog` 适配器, 将 `cz-conventional-changelog` 替换为 `cz-git` 即可
+
 **全局安装**
 
 ```bash
@@ -27,6 +34,8 @@ echo '{ "path": "cz-conventional-changelog" }' | Add-content -Encoding UTF8 -Pat
 可以在.czrc 文件下添加[更多配置](https://github.com/commitizen/cz-conventional-changelog?tab=readme-ov-file#configuration)
 
 **局部配置[参考](https://github.com/commitizen/cz-cli?tab=readme-ov-file#making-your-repo-commitizen-friendly)**
+
+完成后使用 cz -a 命令即可
 
 #### 创建一个新的本地仓库关联远程仓库
 
