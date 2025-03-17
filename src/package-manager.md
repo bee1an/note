@@ -24,7 +24,7 @@ npm i --frozen-lockfile
 
 其他:
 
-- 替代命令（pnpm 特有）**ai 生成未测试**
+- 替代命令（pnpm 特有）**该方案 ai 生成未测试**
 
   ```bash
   # 在测试项目中直接安装本地组件库
@@ -43,7 +43,7 @@ npm i --frozen-lockfile
   pnpm unlink --global @your-scope/components
   ```
 
-  - 清除全局储存的软连接
+  - ~~清除全局储存的软连接~~(**经测试不对**, 直接使用`pnpm remove 项目名 -g`即可清除)
 
   ```bash
   # 进入组件库目录
@@ -51,4 +51,9 @@ npm i --frozen-lockfile
 
   # 解除全局链接
   pnpm unlink --global
+  ```
+
+- pnpm 全局安装目录地址
+  ```bash
+  pnpm root -g
   ```
