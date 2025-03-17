@@ -4,6 +4,30 @@
 
 [有趣的 git 网站](https://learngitbranching.js.org/?locale=zh_CN)
 
+#### [commitizen](https://github.com/commitizen/cz-cli) 最佳实践
+
+规范 git commit 的库, 需要一个[适配器](https://github.com/commitizen/cz-conventional-changelog)
+
+**全局安装**
+
+```bash
+npm install -g commitizen
+
+# 安装适配器
+npm install -g cz-conventional-changelog
+
+# 全局配置适配器
+# echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
+# 官网的配置方法在windows电脑下可能回报 utf8 的错误
+# https://github.com/commitizen/cz-cli/issues/949
+# 解决方法
+echo '{ "path": "cz-conventional-changelog" }' | Add-content -Encoding UTF8 -Path ~/.czrc
+```
+
+可以在.czrc 文件下添加[更多配置](https://github.com/commitizen/cz-conventional-changelog?tab=readme-ov-file#configuration)
+
+**局部配置[参考](https://github.com/commitizen/cz-cli?tab=readme-ov-file#making-your-repo-commitizen-friendly)**
+
 #### 创建一个新的本地仓库关联远程仓库
 
 ```bash
