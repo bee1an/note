@@ -1,5 +1,15 @@
 # 🧩 关于包管理器
 
+#### npx 是什么
+
+**临时安装**并运行一个 Node.js 包，而无需全局安装或显式添加到项目依赖中
+
+比如临时使用 `crate-react-app`
+
+```bash
+npx create-react-app my-app
+```
+
 #### 常用命令
 
 基于现有 lockfile 安装依赖（不更新 lockfile）
