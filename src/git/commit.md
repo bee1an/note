@@ -1,5 +1,12 @@
 # commit 规范
 
+这些库的配合流程
+
+-> 使用 `commitlint` + `cz-git` 生成 commit message
+-> 使用 `husky` + `lint-staged` 校验暂存区代码是否符合 eslint, prettier 等规范
+-> 使用 `husky` + `commitlint` 校验`commit message`是否符合规范
+-> 校验全部通过, 允许 commit
+
 ### [commitlint](https://github.com/conventional-changelog/commitlint)
 
 搭配[husky](https://github.com/typicode/husky), 可以在提交代码前校验提交信息是否符合规范
@@ -55,6 +62,48 @@ No staged files match any of provided globs.
 ⓘ   Get help: https://github.com/conventional-changelog/commitlint/#what-is-commitlint
 
 husky - commit-msg script failed (code 1)
+```
+
+### [lint-staged](https://github.com/lint-staged/lint-staged)
+
+在 git 暂存区的文件上运行命令(eslint, prettier 等)
+
+思考: 为什么不在 pre-commit 中时候使用 eslint 或者 prettier 等命令
+
+- eslint 或者 prettier 等命令会检查整个项目, 项目庞大时会浪费时间
+- 只检查修改的文件, 可以提高效率, 所以需要整个工具
+
+安装
+
+```bash
+npm install --save-dev lint-staged
+```
+
+配置, 使用最常用的在 `package.json` 中配置, [其他配置方法](https://github.com/lint-staged/lint-staged?tab=readme-ov-file#configuration)
+
+```json
+// 以下配置借鉴了naive-ui的配置
+{
+  "lint-staged": {
+    "*{.js,.ts,.tsx}": ["prettier --write", "eslint --fix"],
+    "*.vue": ["prettier --parser=vue --write", "eslint --fix"],
+    "*.css": ["prettier --write"],
+    "*.md": [
+      "prettier --write --parser markdown --prose-wrap never",
+      "eslint --fix"
+    ]
+  }
+}
+```
+
+使用
+
+```bash
+# 在husky中安装钩子
+echo "npm lint-staged" > .husky/pre-commit
+
+# or
+node -e "fs.appendFileSync('.husky/pre-commit', '\nnpm lint-staged')"
 ```
 
 ### [commitizen](https://github.com/commitizen/cz-cli)
