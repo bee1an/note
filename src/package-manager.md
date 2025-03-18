@@ -32,6 +32,8 @@ npm i --frozen-lockfile
 
 3. 在测试项目中引入这个软连接, `pnpm link --global 项目名`
 
+也可以通过 `pnpm add -g .` 命令将本地代码链接到 npm 全局软链接, 删除的话可以通过`pnpm remove -g 项目名`命令删除
+
 其他:
 
 - 替代命令（pnpm 特有）**该方案 ai 生成未测试**
@@ -53,7 +55,7 @@ npm i --frozen-lockfile
   pnpm unlink --global @your-scope/components
   ```
 
-  - ~~清除全局储存的软连接~~(**经测试不对**, 直接使用`pnpm remove 项目名 -g`即可清除)
+  - 清除全局储存的软连接
 
   ```bash
   # 进入组件库目录
