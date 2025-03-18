@@ -4,7 +4,7 @@
 
 - [📦 关于打包](src/build.md)
 
-- [🌿 关于 git](src/git.md)
+- [🌿 关于 git](src/git/git.md)
 
 - [✍️ 随手记](src/jot-down.md)
 

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "just a note",
   "scripts": {
-    "write": "node ./scripts/update-redeme.js"
+    "write": "node ./scripts/update-readme.js"
   },
   "keywords": [
     "note"
