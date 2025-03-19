@@ -3,11 +3,18 @@
   "version": "1.0.0",
   "description": "just a note",
   "scripts": {
-    "write": "node ./scripts/update-readme.js"
+    "write": "node ./scripts/update-readme.js",
+    "prepare": "husky"
   },
   "keywords": [
     "note"
   ],
   "author": "bee1an",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "19.8.0",
+    "@commitlint/config-conventional": "19.8.0",
+    "cz-git": "1.11.1",
+    "husky": "9.1.7"
+  }
 }
