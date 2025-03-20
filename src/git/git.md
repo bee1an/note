@@ -4,6 +4,12 @@
 
 [有趣的 git 网站](https://learngitbranching.js.org/?locale=zh_CN)
 
+#### 本地仓库跟踪远程仓库
+
+```bash
+git push -u origin 分支名 # -u = --set-upstream
+```
+
 #### 创建一个新的本地仓库关联远程仓库
 
 ```bash
