@@ -34,7 +34,7 @@ npm i --frozen-lockfile
 
 1. 进入到需要代理的项目根目录(在打包后代理, package.json 同级目录)
 
-2. 执行`pnpm link --global`, 此命令会将当前包(package.json 中的 name)代理到 npm 全局储存目录
+2. 执行`pnpm link --global`, 此命令会将当前包(package.json 中的 name)代理到 pnpm 全局储存目录
 
 3. 在测试项目中引入这个软连接, `pnpm link --global 项目名`
 
