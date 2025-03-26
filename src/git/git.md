@@ -4,6 +4,17 @@
 
 [有趣的 git 网站](https://learngitbranching.js.org/?locale=zh_CN)
 
+#### 关于 ssh
+
+```bash
+# 生成密钥（推荐使用更强的 ed25519 算法）
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+
+密钥会生成在 `~/.ssh` 目录下, 分别是 `id_ed25519` 和 `id_ed25519.pub`
+
+私钥放在本地, 公钥放在 Git 平台, 二者匹配则可以操作仓库
+
 #### tag
 
 ````bash
