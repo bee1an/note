@@ -6,7 +6,7 @@
 
 #### [oh-my-posh](https://ohmyposh.dev/)
 
-一个用于美化 `Windows` 终端的工具, 支持多种主题
+一个用于美化 `Windows` 终端的工具, 支持多种主题, powershell 下支持自动补全
 
 ```bash
 # 安装
@@ -17,7 +17,7 @@ winget install JanDeDobbeleer.OhMyPosh -s winget
 
 #### [clink](https://github.com/chrisant996/clink)
 
-命令行自动补全工具
+命令行自动补全工具, windows 自带的命令行工具不支持自动补全
 
 ```bash
 # 安装
