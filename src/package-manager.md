@@ -1,5 +1,36 @@
 # 🧩 关于包管理器
 
+#### package tag
+
+npm publish 时，可以给包添加 tag，方便用户选择安装
+
+```bash
+npm publish --tag <tagname>
+```
+
+- beta: 预览版
+- latest: 最新版
+- alpha: 内测版
+- 可以自定义
+
+**查看**一个包的所有 tag
+
+```bash
+npm dist-tag ls <your package>
+```
+
+**删除**一个 tag
+
+```bash
+npm dist-tag rm <package> <tagname>
+```
+
+**添加**一个 tag
+
+```bash
+npm dist-tag add <package>@<version> <tagname>
+```
+
 #### 安装选项
 
 1. --save-dev(简写 -D)​: 将包添加到开发依赖中
