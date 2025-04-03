@@ -20,6 +20,8 @@ css 预处理器
 
 以下代码没有投入生产, 只是提供一个思路, 生产方案参考 [element-plus](https://github.com/element-plus/element-plus/blob/dev/packages/theme-chalk/src/mixins/mixins.scss)
 
+我写了一个 bem 的 ts 类, 用来生成 bem 的命名规则, [代码](./bem.ts)
+
 #### 定义
 
 定义 bem 的命名规则
