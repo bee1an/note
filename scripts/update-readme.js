@@ -1,5 +1,7 @@
 // @ts-check
+// @ts-ignore
 const fs = require('fs')
+// @ts-ignore
 const path = require('path')
 const { root, pathSrc } = require('./paths')
 const { prefix } = require('./redeme-template')
@@ -13,7 +15,7 @@ fs.writeFileSync(path.join(root, 'README.md'), prefix)
  * 拼接 README.md
  */
 fs.readdirSync(pathSrc)
-  .map((file) => {
+  .map((/** @type {string} */ file) => {
     let fullPath = path.join(pathSrc, file)
 
     if (fs.statSync(fullPath).isDirectory()) {
