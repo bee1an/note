@@ -10,6 +10,10 @@
 
 - [✍️ 随手记](src/jot-down.md)
 
+- [📝 关于 markdown](src/markdown.md)
+
+- [🟡 关于 nodejs](src/nodejs.md)
+
 - [🧩 关于包管理器](src/package-manager.md)
 
 - [🚀 关于发布](src/publish.md)
