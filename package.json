@@ -4,7 +4,10 @@
   "description": "just a note",
   "scripts": {
     "write": "node ./scripts/update-readme.js",
-    "prepare": "husky"
+    "prepare": "husky",
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
   },
   "keywords": [
     "note"
@@ -15,6 +18,7 @@
     "@commitlint/cli": "19.8.0",
     "@commitlint/config-conventional": "19.8.0",
     "cz-git": "1.11.1",
-    "husky": "9.1.7"
+    "husky": "9.1.7",
+    "vitepress": "^1.6.3"
   }
 }

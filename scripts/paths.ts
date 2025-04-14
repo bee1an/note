@@ -1,7 +1,7 @@
-const path = require('path')
+import path from 'path'
 
 const root = path.resolve(__dirname, '..')
 
 const pathSrc = path.join(root, 'src')
 
-module.exports = { root, pathSrc }
+export { root, pathSrc }
