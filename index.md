@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 查看详情
-      link: /src/QA.md
+      link: /src
 ---
 
 # ⚠️ 可能不准确

@@ -54,6 +54,7 @@ const sidebar = generateDeepSidebar(fs.readdirSync(pathSrc), pathSrc)
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/yak-note/',
   title: '随手记',
   description: '记录遇到的任何东西',
   themeConfig: {
