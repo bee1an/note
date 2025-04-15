@@ -63,18 +63,26 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: '笔记页', link: '/src' }
     ],
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/bee1an/yak-note' }
     ],
-
     sidebar: [
       {
-        text: '提示',
+        text: getMdTitle(path.join(pathSrc, 'index.md')),
         link: '/src/index.md',
         items: []
       },
       ...sidebar
-    ]
-  }
+    ],
+    search: {
+      provider: 'local'
+    },
+    docFooter: {
+      next: '下一页'
+    },
+    lastUpdated: {
+      text: '最后更新时间'
+    }
+  },
+  lastUpdated: true
 })

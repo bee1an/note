@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "description": "just a note",
   "scripts": {
-    "write": "node ./scripts/update-readme.js",
     "prepare": "husky",
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
   },
   "keywords": [
     "note"
