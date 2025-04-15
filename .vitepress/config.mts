@@ -14,6 +14,7 @@ const generateDeepSidebar = (
   ...parents: string[]
 ) => {
   return files
+    .sort()
     .map((file) => {
       let fullPath = path.join(dirname, file)
 
@@ -38,7 +39,7 @@ const generateDeepSidebar = (
         }
       }
 
-      if (!file.endsWith('.md') && file !== 'index.md') {
+      if (!file.endsWith('.md') || file === 'index.md') {
         return null
       }
 
@@ -78,6 +79,7 @@ export default defineConfig({
       provider: 'local'
     },
     docFooter: {
+      prev: '上一页',
       next: '下一页'
     },
     lastUpdated: {
