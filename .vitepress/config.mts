@@ -34,7 +34,9 @@ const generateDeepSidebar = (
 
         return {
           text: getMdTitle(path.join(fullPath, sameNameFile)),
-          link: path.join('/src', ...parents, file, sameNameFile),
+          link: path
+            .join('/src', ...parents, file, sameNameFile)
+            .replaceAll('\\', '/'),
           items: items.length > 0 ? items : undefined
         }
       }
@@ -45,7 +47,7 @@ const generateDeepSidebar = (
 
       return {
         text: getMdTitle(fullPath),
-        link: path.join('/src', ...parents, file)
+        link: path.join('/src', ...parents, file).replaceAll('\\', '/')
       }
     })
     .filter((item) => item !== null)
