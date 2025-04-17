@@ -4,7 +4,7 @@
 
 [有趣的 git 网站](https://learngitbranching.js.org/?locale=zh_CN)
 
-#### 关于 ssh
+## 关于 ssh
 
 ```bash
 # 生成密钥（推荐使用更强的 ed25519 算法）
@@ -15,7 +15,7 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 
 私钥放在本地, 公钥放在 Git 平台, 二者匹配则可以操作仓库
 
-#### tag
+## tag
 
 ```bash
 git tag -a v1.0 -m "tag message" # -a 表示创建一个带注释的标签
@@ -25,13 +25,13 @@ git push origin --tags # 推送所有标签到远程仓库
 git push --follow-tags # 推送的时候带上标签
 ```
 
-#### 本地仓库跟踪远程仓库
+## 本地仓库跟踪远程仓库
 
 ```bash
 git push -u origin 分支名 # -u = --set-upstream
 ```
 
-#### 创建一个新的本地仓库关联远程仓库
+## 创建一个新的本地仓库关联远程仓库
 
 ```bash
 # 初始化一个仓库
@@ -47,7 +47,7 @@ git remote add origin 远端仓库地址
 git push -u origin main
 ```
 
-#### 解决 git push 403 错误
+## 解决 git push 403 错误
 
 错误原因: git 所设端口与系统代理不一致
 
@@ -72,7 +72,7 @@ git config --global --unset http.proxy
 git config --global --unset https.proxy
 ```
 
-#### git 用户和邮箱
+## git 用户和邮箱
 
 ```bash
 # 查看 git 用户名和邮箱

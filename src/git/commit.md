@@ -7,7 +7,7 @@
 -> 使用 `husky` + `commitlint` 校验`commit message`是否符合规范
 -> 校验全部通过, 允许 commit
 
-### [commitlint](https://github.com/conventional-changelog/commitlint)
+## [commitlint](https://github.com/conventional-changelog/commitlint)
 
 搭配[husky](https://github.com/typicode/husky), 可以在提交代码前校验提交信息是否符合规范
 
@@ -31,7 +31,7 @@ export default defineConfig({
 
 安装完成后, 可以使用 `npx commitlint --from HEAD~1 --to HEAD --verbose` 命令来校验**上一次提交信息**是否符合规范
 
-### [husky](https://github.com/typicode/husky)
+## [husky](https://github.com/typicode/husky)
 
 git hooks 工具, 可以在 git 钩子中执行命令, 比如在提交代码前校验提交信息是否符合规范
 
@@ -64,7 +64,7 @@ No staged files match any of provided globs.
 husky - commit-msg script failed (code 1)
 ```
 
-### [lint-staged](https://github.com/lint-staged/lint-staged)
+## [lint-staged](https://github.com/lint-staged/lint-staged)
 
 在 git 暂存区的文件上运行命令(eslint, prettier 等)
 
@@ -106,7 +106,7 @@ echo "npm lint-staged" > .husky/pre-commit
 node -e "fs.appendFileSync('.husky/pre-commit', '\nnpm lint-staged')"
 ```
 
-### [commitizen](https://github.com/commitizen/cz-cli)
+## [commitizen](https://github.com/commitizen/cz-cli)
 
 使用命令行来提交 commit message
 
@@ -133,7 +133,7 @@ echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
 
 完成后使用 `cz -a` 命令即可
 
-### [cz-git](https://cz-git.qbb.sh/zh/)
+## [cz-git](https://cz-git.qbb.sh/zh/)
 
 - 更好的图标支持
 - 更友好的文档
@@ -152,7 +152,7 @@ npm install --save-dev cz-git
 
 [cz-git 结合 commitlint 配置](#cz-git-结合-commitlint-配置)
 
-### cz-git 结合 commitlint 配置
+## cz-git 结合 commitlint 配置
 
 ```js
 // commitlint.config.js
