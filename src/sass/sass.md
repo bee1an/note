@@ -1,30 +1,30 @@
 # 🎨 sass
 
-css 预处理器
+`css` 预处理器
 
-为什么安装使用 sass, 文件名又是 scss
+为什么安装使用 `sass`, 文件名又是 `scss`
 
-.sass 文件是 sass 的语法, 没有大括号和分号, 比较反人类, 后面新增了 scss 语法, 就是使用量最多的 scss
+`.sass` 文件是 `sass` 的语法, 没有大括号和分号, 比较反人类, 后面新增了 `scss` 语法, 就是使用量最多的 `scss`
 
-### 小计
+## 小计
 
 **@use 和 @forward**
 
 > 以下内容是我自己的理解, 没有经过实践
 
-@use 是引入后, 可以直接使用里面的变量等
+`@use` 是引入后, 可以直接使用里面的变量等
 
-@forward 相当于在导入到这个文件再直接导出, 相当于一个中转站, 可以在其他文件使用 forward 文件中的变量, 但在当前文件中不能直接使用
+`@forward` 相当于在导入到这个文件再直接导出, 相当于一个中转站, 可以在其他文件使用 forward 文件中的变量, 但在当前文件中不能直接使用
 
-### 使用 sass 编写 bem
+## 使用 sass 编写 bem
 
 以下代码没有投入生产, 只是提供一个思路, 生产方案参考 [element-plus](https://github.com/element-plus/element-plus/blob/dev/packages/theme-chalk/src/mixins/mixins.scss)
 
-我写了一个 bem 的 ts 类, 用来生成 bem 的命名规则, [代码](./bem.ts)
+我写了一个 `bem` 的 `ts` 类, 用来生成 `bem` 的命名规则, [代码](./bem.ts)
 
-#### 定义
+### 定义
 
-定义 bem 的命名规则
+定义 `bem` 的命名规则
 
 ```scss
 // 命名空间
@@ -92,7 +92,7 @@ $statePrefix: 'is-';
 }
 ```
 
-#### 使用
+### 使用
 
 ```scss
 @include b('button') {
