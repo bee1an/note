@@ -1,6 +1,6 @@
 # 🔧 关于 ts
 
-**tsconfig.json 关键配置**
+## tsconfig.json 关键配置
 
 - `verbatimModuleSyntax`: 导入类型不使用 **import type** 时报错
 
