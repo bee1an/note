@@ -1,6 +1,6 @@
 # ⌨️ windows 命令行相关记录
 
-#### echo
+## echo
 
 1. 对文件的操作, 没有这个文件会自动创建这个文件
 
@@ -14,7 +14,7 @@ echo "新内容" > file.txt
 echo "Hello World" >> file.txt
 ```
 
-#### mkdir
+## mkdir
 
 创建目录
 

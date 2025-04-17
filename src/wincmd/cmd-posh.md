@@ -2,9 +2,9 @@
 
 [参考文章](https://www.cooorgi.top/articles/5e70877f.html)
 
-### 准备
+## 准备
 
-#### [oh-my-posh](https://ohmyposh.dev/)
+### [oh-my-posh](https://ohmyposh.dev/)
 
 一个用于美化 `Windows` 终端的工具, 支持多种主题, powershell 下支持自动补全
 
@@ -15,7 +15,7 @@ winget install JanDeDobbeleer.OhMyPosh -s winget
 # 环境变量指向 C:\Users\user\AppData\Local\Programs\oh-my-posh\bin
 ```
 
-#### [clink](https://github.com/chrisant996/clink)
+### [clink](https://github.com/chrisant996/clink)
 
 命令行自动补全工具, windows 自带的命令行工具不支持自动补全
 
@@ -27,7 +27,7 @@ winget install clink
 
 或者到[官网](https://chrisant996.github.io/clink/)下载 exe 运行
 
-#### [nerd font](https://www.nerdfonts.com/font-downloads)
+### [nerd font](https://www.nerdfonts.com/font-downloads)
 
 字体, 解决不显示图标和乱码问题
 
@@ -35,9 +35,9 @@ winget install clink
 
 下载完成后将 ttf 后缀文件复制到 `C:\Windows\Fonts` 目录下
 
-### 开始
+## 开始
 
-#### cmd 美化
+### cmd 美化
 
 找到 clink 的安装路径（默认应为 C:\Program Files (x86)\clink），在文件夹中创建一个文件 oh-my-posh.lua，添加以下内容
 
@@ -48,7 +48,7 @@ load(io.popen('oh-my-posh init cmd'):read("\*a"))()
 load(io.popen("oh-my-posh init cmd --config D:\\tools\\oh-my-posh\\themes\\my.omp.json"):read("*a"))()
 ```
 
-#### powershell 美化
+### powershell 美化
 
 先更新最新的版本
 
@@ -98,7 +98,7 @@ oh-my-posh init pwsh  | Invoke-Expression
 oh-my-posh init pwsh --config D:\\tools\\oh-my-posh\\themes\\my.omp.json | Invoke-Expression
 ```
 
-#### 配置终端字体
+### 配置终端字体
 
 打开终端 json 设置, 添加以下配置
 
@@ -118,7 +118,7 @@ oh-my-posh init pwsh --config D:\\tools\\oh-my-posh\\themes\\my.omp.json | Invok
 }
 ```
 
-#### 配置 vscode 终端字体
+### 配置 vscode 终端字体
 
 在 `settings.json` 中添加以下配置
 
