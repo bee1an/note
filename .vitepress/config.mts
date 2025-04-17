@@ -23,7 +23,7 @@ const generateDeepSidebar = (
 
         const sameNameFile = newFiles.find(
           (_file) => _file.split('.')[0] === file
-        )!
+        )
 
         const items = generateDeepSidebar(
           newFiles.filter((f) => f !== sameNameFile),
@@ -32,11 +32,20 @@ const generateDeepSidebar = (
           file
         )
 
-        return {
-          text: getMdTitle(path.join(fullPath, sameNameFile)),
-          link: path
+        let text: string, link: string | undefined
+
+        if (sameNameFile) {
+          text = getMdTitle(path.join(fullPath, sameNameFile))
+          link = path
             .join('/src', ...parents, file, sameNameFile)
-            .replaceAll('\\', '/'),
+            .replaceAll('\\', '/')
+        } else {
+          text = getMdTitle(path.join(fullPath, 'index.md'))
+        }
+
+        return {
+          text,
+          link,
           items: items.length > 0 ? items : undefined
         }
       }
