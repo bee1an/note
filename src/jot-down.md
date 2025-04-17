@@ -1,6 +1,6 @@
 # ✍️ 随手记
 
-#### \_\_dirname
+## \_\_dirname
 
 在 `nodejs` 中, `__dirname` 是一个全局变量, 表示当前执行脚本所在的**目录**
 
@@ -14,7 +14,7 @@ import { fileURLToPath } from 'node:url'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 ```
 
-#### tsx 模板引用
+## tsx 模板引用
 
 在使用 tsx `defineComponent` 的 render 时, 模板引用不使用 `useTemplateRef` 时, 需要将 ref 变量在 setup 函数中 **return** 出去
 
@@ -22,7 +22,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 > 顺手一提: 模板中的 ref 原理是在渲染的某个阶段将对应的 dom 或者组件实例赋值给 ref 变量, 所以在 setup 函数中**无法访问**到模板中的 ref 变量, 只有 return 出去才能访问
 
-#### 折叠 vscode 文件
+## 折叠 vscode 文件
 
 在 vscode 中可以通过配置 settings.json 折叠文件
 
@@ -39,7 +39,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 }
 ```
 
-#### node 模块解析规则
+## node 模块解析规则
 
 在模块化中如果`require('...')`或者 `import '...'`会遵循以下规则
 
