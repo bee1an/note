@@ -3,6 +3,7 @@
   "name": "yak-note",
   "version": "1.0.0",
   "description": "just a note",
+  "homepage": "https://bee1an.github.io/yak-note/",
   "scripts": {
     "prepare": "husky",
     "dev": "vitepress dev",

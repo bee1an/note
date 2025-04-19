@@ -38,7 +38,7 @@
 
 这些模式关注对象之间的通信和交互，旨在解决对象之间的责任分配和算法的封装。
 
-- [责任链模式（Chain of Responsibility Pattern）](./chain-of-responsibility-pattern.md)
+- [责任链模式（Chain of Responsibility Pattern）](./chain-of-responsibility-pattern/chain-of-responsibility-pattern.md)
 - 命令模式（Command Pattern）
 - 解释器模式（Interpreter Pattern）
 - 迭代器模式（Iterator Pattern）

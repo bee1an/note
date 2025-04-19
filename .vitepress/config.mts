@@ -43,11 +43,7 @@ const generateDeepSidebar = (
           text = getMdTitle(path.join(fullPath, 'index.md'))
         }
 
-        return {
-          text,
-          link,
-          items: items.length > 0 ? items : undefined
-        }
+        return { text, link, items }
       }
 
       if (!file.endsWith('.md') || file === 'index.md') {
