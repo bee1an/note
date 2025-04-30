@@ -4,6 +4,12 @@
 
 [有趣的 git 网站](https://learngitbranching.js.org/?locale=zh_CN)
 
+## 设置行尾序列为 LF
+
+```bash
+git config --global core.autocrlf false
+```
+
 ## 关于 ssh
 
 ```bash
@@ -47,7 +53,7 @@ git remote add origin 远端仓库地址
 git push -u origin main
 ```
 
-## 解决 git push 403 错误
+## 解决 git push 443 错误
 
 错误原因: git 所设端口与系统代理不一致
 
@@ -56,8 +62,8 @@ git push -u origin main
 2. 配置 git 代理端口为系统代理端口
 
 ```bash
-git config --global http.proxy 系统代理
-git config --global https.proxy 系统代理
+git config --global http.proxy <http://127.0.0.1:7897>
+git config --global https.proxy <http://127.0.0.1:7897>
 ```
 
 其他命令
