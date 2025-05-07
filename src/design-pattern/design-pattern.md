@@ -19,7 +19,7 @@
   > 参考文章这里的表格的应该有翻译错误, 应该是 "工厂方式模式" 而不是 "工厂模式", 工厂模式是工厂方法模式和抽象工厂模式的统称
 - [抽象工厂模式（Abstract Factory Pattern）](./factory-pattern/abstract-factory-pattern/abstract-factory-pattern.md)
 - [单例模式（Singleton Pattern）](./singleton-pattern/singleton-pattern.md)
-- 建造者模式（Builder Pattern）
+- [建造者模式（Builder Pattern）](./builder-pattern/builder-pattern.md)
 - 原型模式（Prototype Pattern）
 
 ## 结构型模式
