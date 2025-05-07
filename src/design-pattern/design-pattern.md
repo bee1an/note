@@ -15,10 +15,10 @@
 
 这些设计模式提供了一种在创建对象的同时隐藏创建逻辑的方式，而不是使用 new 运算符直接实例化对象。这使得程序在判断针对某个给定实例需要创建哪些对象时更加灵活
 
-- ~~工厂模式（Factory Pattern）~~ [工厂方式模式（Factory Method Pattern）](./factory-pattern/factory-pattern.md)
+- ~~工厂模式（Factory Pattern）~~ [工厂方式模式（Factory Method Pattern）](./factory-pattern/factory-method-pattern/factory-method-pattern.md)
   > 参考文章这里的表格的应该有翻译错误, 应该是 "工厂方式模式" 而不是 "工厂模式", 工厂模式是工厂方法模式和抽象工厂模式的统称
-- 抽象工厂模式（Abstract Factory Pattern）
-- 单例模式（Singleton Pattern）
+- [抽象工厂模式（Abstract Factory Pattern）](./factory-pattern/abstract-factory-pattern/abstract-factory-pattern.md)
+- [单例模式（Singleton Pattern）](./singleton-pattern/singleton-pattern.md)
 - 建造者模式（Builder Pattern）
 - 原型模式（Prototype Pattern）
 
