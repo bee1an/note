@@ -20,7 +20,7 @@
 - [抽象工厂模式（Abstract Factory Pattern）](./factory-pattern/abstract-factory-pattern/abstract-factory-pattern.md)
 - [单例模式（Singleton Pattern）](./singleton-pattern/singleton-pattern.md)
 - [建造者模式（Builder Pattern）](./builder-pattern/builder-pattern.md)
-- 原型模式（Prototype Pattern）
+- [原型模式（Prototype Pattern）](./prototype-pattern/prototype-pattern.md)
 
 ## 结构型模式
 
