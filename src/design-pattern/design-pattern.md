@@ -48,7 +48,7 @@
 - 观察者模式（Observer Pattern）
 - 状态模式（State Pattern）
 - 空对象模式（Null Object Pattern）
-- 策略模式（Strategy Pattern）
+- [策略模式（Strategy Pattern）](./strategy-pattern/strategy-pattern.md)
 - 模板模式（Template Pattern）
 - 访问者模式（Visitor Pattern）
 
