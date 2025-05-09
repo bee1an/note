@@ -18,10 +18,10 @@
 
 ```ts
 class Pay {
-  handlePay() {
-    const payInstance = new WxPay()
-    payInstance.pay()
-  }
+	handlePay() {
+		const payInstance = new WxPay()
+		payInstance.pay()
+	}
 }
 const pay = new Pay()
 pay.handlePay()

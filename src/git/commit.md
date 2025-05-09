@@ -2,10 +2,7 @@
 
 这些库的配合流程
 
--> 使用 `commitlint` + `cz-git` 生成 commit message
--> 使用 `husky` + `lint-staged` 校验暂存区代码是否符合 eslint, prettier 等规范
--> 使用 `husky` + `commitlint` 校验`commit message`是否符合规范
--> 校验全部通过, 允许 commit
+-> 使用 `commitlint` + `cz-git` 生成 commit message -> 使用 `husky` + `lint-staged` 校验暂存区代码是否符合 eslint, prettier 等规范 -> 使用 `husky` + `commitlint` 校验`commit message`是否符合规范 -> 校验全部通过, 允许 commit
 
 ## [commitlint](https://github.com/conventional-changelog/commitlint)
 
@@ -22,8 +19,8 @@ prompt 配置使用 [`cz-git`](#cz-git) 适配器
 
 ```js
 export default defineConfig({
-  extends: ['@commitlint/config-conventional']
-  /* 
+	extends: ['@commitlint/config-conventional']
+	/* 
     prompt: 配置为cz-git的内容
   */
 })
@@ -84,15 +81,12 @@ npm install --save-dev lint-staged
 ```json
 // 以下配置借鉴了naive-ui的配置
 {
-  "lint-staged": {
-    "*{.js,.ts,.tsx}": ["prettier --write", "eslint --fix"],
-    "*.vue": ["prettier --parser=vue --write", "eslint --fix"],
-    "*.css": ["prettier --write"],
-    "*.md": [
-      "prettier --write --parser markdown --prose-wrap never",
-      "eslint --fix"
-    ]
-  }
+	"lint-staged": {
+		"*{.js,.ts,.tsx}": ["prettier --write", "eslint --fix"],
+		"*.vue": ["prettier --parser=vue --write", "eslint --fix"],
+		"*.css": ["prettier --write"],
+		"*.md": ["prettier --write --parser markdown --prose-wrap never", "eslint --fix"]
+	}
 }
 ```
 
@@ -160,109 +154,105 @@ npm install --save-dev cz-git
 import { defineConfig } from 'cz-git'
 
 export default defineConfig({
-  extends: ['@commitlint/config-conventional'],
-  prompt: {
-    messages: {
-      type: "Select the type of change that you're committing:",
-      scope: 'Denote the SCOPE of this change (optional):',
-      customScope: 'Denote the SCOPE of this change:',
-      subject: 'Write a SHORT, IMPERATIVE tense description of the change:\n',
-      body: 'Provide a LONGER description of the change (optional). Use "|" to break new line:\n',
-      breaking:
-        'List any BREAKING CHANGES (optional). Use "|" to break new line:\n',
-      footerPrefixSelect:
-        'Select the ISSUES type of changeList by this change (optional):',
-      customFooterPrefix: 'Input ISSUES prefix:',
-      footer: 'List any ISSUES by this change. E.g.: #31, #34:\n',
-      generatingByAI: 'Generating your AI commit subject...',
-      generatedSelectByAI: 'Select suitable subject by AI generated:',
-      confirmCommit: 'Are you sure you want to proceed with the commit above?'
-    },
-    types: [
-      {
-        value: 'feat',
-        name: 'feat:     ✨  A new feature',
-        emoji: ':sparkles:'
-      },
-      { value: 'fix', name: 'fix:      🐛  A bug fix', emoji: ':bug:' },
-      {
-        value: 'docs',
-        name: 'docs:     📝  Documentation only changes',
-        emoji: ':memo:'
-      },
-      {
-        value: 'style',
-        name: 'style:    💄  Changes that do not affect the meaning of the code',
-        emoji: ':lipstick:'
-      },
-      {
-        value: 'refactor',
-        name: 'refactor: ♻️   A code change that neither fixes a bug nor adds a feature',
-        emoji: ':recycle:'
-      },
-      {
-        value: 'perf',
-        name: 'perf:     ⚡️  A code change that improves performance',
-        emoji: ':zap:'
-      },
-      {
-        value: 'test',
-        name: 'test:     ✅  Adding missing tests or correcting existing tests',
-        emoji: ':white_check_mark:'
-      },
-      {
-        value: 'build',
-        name: 'build:    📦️   Changes that affect the build system or external dependencies',
-        emoji: ':package:'
-      },
-      {
-        value: 'ci',
-        name: 'ci:       🎡  Changes to our CI configuration files and scripts',
-        emoji: ':ferris_wheel:'
-      },
-      {
-        value: 'chore',
-        name: "chore:    🔨  Other changes that don't modify src or test files",
-        emoji: ':hammer:'
-      },
-      {
-        value: 'revert',
-        name: 'revert:   ⏪️  Reverts a previous commit',
-        emoji: ':rewind:'
-      }
-    ],
-    useEmoji: true,
-    emojiAlign: 'center',
-    useAI: false,
-    aiNumber: 1,
-    themeColorCode: '',
-    scopes: [],
-    allowCustomScopes: true,
-    allowEmptyScopes: true,
-    customScopesAlign: 'bottom',
-    customScopesAlias: 'custom',
-    emptyScopesAlias: 'empty',
-    upperCaseSubject: false,
-    markBreakingChangeMode: false,
-    allowBreakingChanges: ['feat', 'fix'],
-    breaklineNumber: 100,
-    breaklineChar: '|',
-    skipQuestions: [],
-    issuePrefixes: [
-      { value: 'closed', name: 'closed:   ISSUES has been processed' }
-    ],
-    customIssuePrefixAlign: 'top',
-    emptyIssuePrefixAlias: 'skip',
-    customIssuePrefixAlias: 'custom',
-    allowCustomIssuePrefix: true,
-    allowEmptyIssuePrefix: true,
-    confirmColorize: true,
-    scopeOverrides: undefined,
-    defaultBody: '',
-    defaultIssues: '',
-    defaultScope: ['test'],
-    defaultSubject: ''
-  }
+	extends: ['@commitlint/config-conventional'],
+	prompt: {
+		messages: {
+			type: "Select the type of change that you're committing:",
+			scope: 'Denote the SCOPE of this change (optional):',
+			customScope: 'Denote the SCOPE of this change:',
+			subject: 'Write a SHORT, IMPERATIVE tense description of the change:\n',
+			body: 'Provide a LONGER description of the change (optional). Use "|" to break new line:\n',
+			breaking: 'List any BREAKING CHANGES (optional). Use "|" to break new line:\n',
+			footerPrefixSelect: 'Select the ISSUES type of changeList by this change (optional):',
+			customFooterPrefix: 'Input ISSUES prefix:',
+			footer: 'List any ISSUES by this change. E.g.: #31, #34:\n',
+			generatingByAI: 'Generating your AI commit subject...',
+			generatedSelectByAI: 'Select suitable subject by AI generated:',
+			confirmCommit: 'Are you sure you want to proceed with the commit above?'
+		},
+		types: [
+			{
+				value: 'feat',
+				name: 'feat:     ✨  A new feature',
+				emoji: ':sparkles:'
+			},
+			{ value: 'fix', name: 'fix:      🐛  A bug fix', emoji: ':bug:' },
+			{
+				value: 'docs',
+				name: 'docs:     📝  Documentation only changes',
+				emoji: ':memo:'
+			},
+			{
+				value: 'style',
+				name: 'style:    💄  Changes that do not affect the meaning of the code',
+				emoji: ':lipstick:'
+			},
+			{
+				value: 'refactor',
+				name: 'refactor: ♻️   A code change that neither fixes a bug nor adds a feature',
+				emoji: ':recycle:'
+			},
+			{
+				value: 'perf',
+				name: 'perf:     ⚡️  A code change that improves performance',
+				emoji: ':zap:'
+			},
+			{
+				value: 'test',
+				name: 'test:     ✅  Adding missing tests or correcting existing tests',
+				emoji: ':white_check_mark:'
+			},
+			{
+				value: 'build',
+				name: 'build:    📦️   Changes that affect the build system or external dependencies',
+				emoji: ':package:'
+			},
+			{
+				value: 'ci',
+				name: 'ci:       🎡  Changes to our CI configuration files and scripts',
+				emoji: ':ferris_wheel:'
+			},
+			{
+				value: 'chore',
+				name: "chore:    🔨  Other changes that don't modify src or test files",
+				emoji: ':hammer:'
+			},
+			{
+				value: 'revert',
+				name: 'revert:   ⏪️  Reverts a previous commit',
+				emoji: ':rewind:'
+			}
+		],
+		useEmoji: true,
+		emojiAlign: 'center',
+		useAI: false,
+		aiNumber: 1,
+		themeColorCode: '',
+		scopes: [],
+		allowCustomScopes: true,
+		allowEmptyScopes: true,
+		customScopesAlign: 'bottom',
+		customScopesAlias: 'custom',
+		emptyScopesAlias: 'empty',
+		upperCaseSubject: false,
+		markBreakingChangeMode: false,
+		allowBreakingChanges: ['feat', 'fix'],
+		breaklineNumber: 100,
+		breaklineChar: '|',
+		skipQuestions: [],
+		issuePrefixes: [{ value: 'closed', name: 'closed:   ISSUES has been processed' }],
+		customIssuePrefixAlign: 'top',
+		emptyIssuePrefixAlias: 'skip',
+		customIssuePrefixAlias: 'custom',
+		allowCustomIssuePrefix: true,
+		allowEmptyIssuePrefix: true,
+		confirmColorize: true,
+		scopeOverrides: undefined,
+		defaultBody: '',
+		defaultIssues: '',
+		defaultScope: ['test'],
+		defaultSubject: ''
+	}
 })
 ```
 

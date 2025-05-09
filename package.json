@@ -1,27 +1,44 @@
 {
-  "packageManager": "pnpm@9.12.2",
-  "name": "yak-note",
-  "version": "1.0.0",
-  "description": "just a note",
-  "homepage": "https://bee1an.github.io/yak-note/",
-  "scripts": {
-    "prepare": "husky",
-    "dev": "vitepress dev",
-    "build": "vitepress build",
-    "preview": "vitepress preview",
-    "runtsx": "pnpm tsx"
-  },
-  "keywords": [
-    "note"
-  ],
-  "author": "bee1an",
-  "license": "ISC",
-  "devDependencies": {
-    "@commitlint/cli": "19.8.0",
-    "@commitlint/config-conventional": "19.8.0",
-    "cz-git": "1.11.1",
-    "husky": "9.1.7",
-    "tsx": "4.19.3",
-    "vitepress": "1.6.3"
-  }
+	"packageManager": "pnpm@9.12.2",
+	"name": "yak-note",
+	"version": "1.0.0",
+	"description": "just a note",
+	"homepage": "https://bee1an.github.io/yak-note/",
+	"scripts": {
+		"prepare": "husky",
+		"dev": "vitepress dev",
+		"build": "vitepress build",
+		"preview": "vitepress preview",
+		"runtsx": "pnpm tsx",
+		"prettier": "prettier . --write"
+	},
+	"keywords": [
+		"note"
+	],
+	"author": "bee1an",
+	"license": "ISC",
+	"devDependencies": {
+		"@commitlint/cli": "19.8.0",
+		"@commitlint/config-conventional": "19.8.0",
+		"cz-git": "1.11.1",
+		"husky": "9.1.7",
+		"lint-staged": "15.5.0",
+		"prettier": "3.5.3",
+		"tsx": "4.19.3",
+		"vitepress": "1.6.3"
+	},
+	"lint-staged": {
+		"*.{js,ts,tsx}": [
+			"prettier --write"
+		],
+		"*.vue": [
+			"prettier --parser=vue --write"
+		],
+		"*.css": [
+			"prettier --write"
+		],
+		"*.md": [
+			"prettier --write --parser markdown --prose-wrap never"
+		]
+	}
 }

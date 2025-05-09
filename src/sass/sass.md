@@ -43,12 +43,12 @@ $statePrefix: 'is-';
 
 ```scss
 @mixin b($blockName) {
-  $B: $namespace + $block-separator + $block;
+	$B: $namespace + $block-separator + $block;
 
-  .#{$B} {
-    // 这里使用 # 表示使用变量
-    @content;
-  }
+	.#{$B} {
+		// 这里使用 # 表示使用变量
+		@content;
+	}
 }
 ```
 
@@ -56,11 +56,11 @@ $statePrefix: 'is-';
 
 ```scss
 @mixin e($element) {
-  $E: $element-separator + $element;
+	$E: $element-separator + $element;
 
-  &#{$E} {
-    @content;
-  }
+	&#{$E} {
+		@content;
+	}
 }
 ```
 
@@ -68,11 +68,11 @@ $statePrefix: 'is-';
 
 ```scss
 @mixin m($modifier) {
-  $M: $modifier-separator + $modifier;
+	$M: $modifier-separator + $modifier;
 
-  &#{$M} {
-    @content;
-  }
+	&#{$M} {
+		@content;
+	}
 }
 ```
 
@@ -80,15 +80,15 @@ $statePrefix: 'is-';
 
 ```scss
 @mixin when($state) {
-  &.#{$state-prefix + $state} {
-    @content;
-  }
+	&.#{$state-prefix + $state} {
+		@content;
+	}
 }
 
 @mixin whenNot($state) {
-  :not(&.#{$state-prefix + $state}) {
-    @content;
-  }
+	:not(&.#{$state-prefix + $state}) {
+		@content;
+	}
 }
 ```
 
@@ -96,20 +96,20 @@ $statePrefix: 'is-';
 
 ```scss
 @include b('button') {
-  // 块级样式
-  @include e('icon') {
-    // 元素样式
-    @include m('primary') {
-      // 修饰符样式
-    }
-  }
-  @include when('disabled') {
-    // 状态样式
-  }
+	// 块级样式
+	@include e('icon') {
+		// 元素样式
+		@include m('primary') {
+			// 修饰符样式
+		}
+	}
+	@include when('disabled') {
+		// 状态样式
+	}
 
-  @include whenNot('disabled') {
-    // 状态样式
-  }
+	@include whenNot('disabled') {
+		// 状态样式
+	}
 }
 ```
 
@@ -117,18 +117,18 @@ $statePrefix: 'is-';
 
 ```css
 .p-button {
-  /*  */
+	/*  */
 }
 .p-button__icon {
-  /*  */
+	/*  */
 }
 .p-button__icon--primary {
-  /*  */
+	/*  */
 }
 .p-button.is-disabled {
-  /*  */
+	/*  */
 }
 :not(.p-button.is-disabled) {
-  /*  */
+	/*  */
 }
 ```

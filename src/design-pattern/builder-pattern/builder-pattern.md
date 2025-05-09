@@ -14,7 +14,7 @@
 
 ```typescript
 class Packer {
-  build() {}
+	build() {}
 }
 ```
 
@@ -22,7 +22,7 @@ class Packer {
 
 ```typescript
 class Packer {
-  build(js: boolean, css: boolean) {}
+	build(js: boolean, css: boolean) {}
 }
 ```
 
@@ -38,16 +38,16 @@ class Packer {
 
 ```typescript
 class Packer {
-  /** 打包js步骤 */
-  buildJs() {}
+	/** 打包js步骤 */
+	buildJs() {}
 
-  /** 打包css步骤 */
-  buildCss() {}
+	/** 打包css步骤 */
+	buildCss() {}
 
-  // ...
+	// ...
 
-  /** 获取打包结果 */
-  getBuilding() {}
+	/** 获取打包结果 */
+	getBuilding() {}
 }
 ```
 

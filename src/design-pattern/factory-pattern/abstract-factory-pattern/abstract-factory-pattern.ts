@@ -3,8 +3,8 @@ export {}
  * 定义抽象工厂
  */
 interface AbstractStyleFactory {
-  createButton(): Button
-  createInput(): Input
+	createButton(): Button
+	createInput(): Input
 }
 
 /**
@@ -13,11 +13,11 @@ interface AbstractStyleFactory {
  * 抽象产品不是非要用abstract, 抽象工厂同理, 不要有这个误区
  */
 class Button {
-  // button组件核心逻辑
+	// button组件核心逻辑
 }
 
 class Input {
-  // input组件核心逻辑
+	// input组件核心逻辑
 }
 
 /**
@@ -27,24 +27,24 @@ class Input {
  * 这个工厂只能创建出 material 风格的组件
  */
 class MaterialStyleFactory implements AbstractStyleFactory {
-  createButton(): Button {
-    return new MaterialButton()
-  }
-  createInput(): Input {
-    return new MaterialInput()
-  }
+	createButton(): Button {
+		return new MaterialButton()
+	}
+	createInput(): Input {
+		return new MaterialInput()
+	}
 }
 
 /**
  * 这个工厂只能创建出 hollowed-out 风格的组件
  */
 class HollowedOutStyleFactory implements AbstractStyleFactory {
-  createButton(): Button {
-    return new HollowedOutButton()
-  }
-  createInput(): Input {
-    return new HollowedOutInput()
-  }
+	createButton(): Button {
+		return new HollowedOutButton()
+	}
+	createInput(): Input {
+		return new HollowedOutInput()
+	}
 }
 
 /**
@@ -53,32 +53,32 @@ class HollowedOutStyleFactory implements AbstractStyleFactory {
  * 具体产品需要实现抽象产品
  */
 class MaterialButton extends Button {
-  constructor() {
-    super()
-    console.log('MaterialButton')
-  }
+	constructor() {
+		super()
+		console.log('MaterialButton')
+	}
 }
 
 /** 另一种风格 */
 class HollowedOutButton extends Button {
-  constructor() {
-    super()
-    console.log('HollowedOutButton')
-  }
+	constructor() {
+		super()
+		console.log('HollowedOutButton')
+	}
 }
 
 class MaterialInput extends Input {
-  constructor() {
-    super()
-    console.log('MaterialInput')
-  }
+	constructor() {
+		super()
+		console.log('MaterialInput')
+	}
 }
 
 class HollowedOutInput extends Input {
-  constructor() {
-    super()
-    console.log('HollowedOutInput')
-  }
+	constructor() {
+		super()
+		console.log('HollowedOutInput')
+	}
 }
 
 // 这样我们需要 material 风格的组件就使用 MaterialStyleFactory 来构造

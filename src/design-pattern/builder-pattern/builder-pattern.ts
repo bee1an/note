@@ -2,72 +2,72 @@
  * 建造者接口, 声明了打包器的不同步骤
  */
 interface Packer {
-  buildJs(): void
+	buildJs(): void
 
-  buildCss(): void
+	buildCss(): void
 
-  buildHtml(): void
+	buildHtml(): void
 
-  buildVue(): void
+	buildVue(): void
 
-  buildJsx(): void
+	buildJsx(): void
 }
 
 /**
  * 具体建造者
  */
 class ConcretePacker implements Packer {
-  private _product = new Set()
+	private _product = new Set()
 
-  private _reset() {
-    this._product.clear()
-  }
+	private _reset() {
+		this._product.clear()
+	}
 
-  /**
-   * 打包js步骤
-   */
-  buildJs() {
-    this._product.add('buildJs')
-  }
+	/**
+	 * 打包js步骤
+	 */
+	buildJs() {
+		this._product.add('buildJs')
+	}
 
-  /**
-   * 打包css步骤
-   */
-  buildCss() {
-    this._product.add('buildCss')
-  }
+	/**
+	 * 打包css步骤
+	 */
+	buildCss() {
+		this._product.add('buildCss')
+	}
 
-  /**
-   * 打包html步骤
-   */
-  buildHtml() {
-    this._product.add('buildHtml')
-  }
+	/**
+	 * 打包html步骤
+	 */
+	buildHtml() {
+		this._product.add('buildHtml')
+	}
 
-  /**
-   * 打包vue步骤
-   */
-  buildVue() {
-    this._product.add('buildVue')
-  }
+	/**
+	 * 打包vue步骤
+	 */
+	buildVue() {
+		this._product.add('buildVue')
+	}
 
-  /**
-   * 打包jsx步骤
-   */
-  buildJsx() {
-    this._product.add('buildJsx')
-  }
+	/**
+	 * 打包jsx步骤
+	 */
+	buildJsx() {
+		this._product.add('buildJsx')
+	}
 
-  /**
-   * 获取打包结果
-   */
-  getBuilding() {
-    const result = [...this._product].join(',')
+	/**
+	 * 获取打包结果
+	 */
+	getBuilding() {
+		const result = [...this._product].join(',')
 
-    this._reset()
+		this._reset()
 
-    return result
-  }
+		return result
+	}
 }
 
 /**
@@ -75,25 +75,25 @@ class ConcretePacker implements Packer {
  */
 
 class Director {
-  /**
-   * 封装打包vue的步骤
-   */
-  buildVue(packer: Packer) {
-    packer.buildJs()
-    packer.buildCss()
-    packer.buildHtml()
-    packer.buildVue()
-  }
+	/**
+	 * 封装打包vue的步骤
+	 */
+	buildVue(packer: Packer) {
+		packer.buildJs()
+		packer.buildCss()
+		packer.buildHtml()
+		packer.buildVue()
+	}
 
-  /**
-   * 封装打包jsx的步骤
-   */
-  buildJsx(packer: Packer) {
-    packer.buildJs()
-    packer.buildCss()
-    packer.buildHtml()
-    packer.buildJsx()
-  }
+	/**
+	 * 封装打包jsx的步骤
+	 */
+	buildJsx(packer: Packer) {
+		packer.buildJs()
+		packer.buildCss()
+		packer.buildHtml()
+		packer.buildJsx()
+	}
 }
 
 const packer = new ConcretePacker()

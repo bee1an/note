@@ -104,17 +104,17 @@ oh-my-posh init pwsh --config D:\\tools\\oh-my-posh\\themes\\my.omp.json | Invok
 
 ```json
 {
-  "profiles": {
-    "defaults": {
-      "colorScheme": "One Half Dark",
-      "font": {
-        "face": "CaskaydiaCove Nerd Font", // 这里使用的是上面下载的字体
-        "size": 10
-      },
-      "opacity": 85,
-      "useAcrylic": true
-    }
-  }
+	"profiles": {
+		"defaults": {
+			"colorScheme": "One Half Dark",
+			"font": {
+				"face": "CaskaydiaCove Nerd Font", // 这里使用的是上面下载的字体
+				"size": 10
+			},
+			"opacity": 85,
+			"useAcrylic": true
+		}
+	}
 }
 ```
 
@@ -124,6 +124,6 @@ oh-my-posh init pwsh --config D:\\tools\\oh-my-posh\\themes\\my.omp.json | Invok
 
 ```json
 {
-  "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font"
+	"terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font"
 }
 ```

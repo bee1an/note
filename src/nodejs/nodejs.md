@@ -60,7 +60,7 @@ export default import('./rollup.config.ts')
 import { defineConfig } from 'rollup'
 
 export default defineConfig({
-  // ...
+	// ...
 })
 ```
 
@@ -83,10 +83,10 @@ module.exports = require('./commitlint.config.ts').default
 ```json
 // .vscode/settings.json
 {
-  "explorer.fileNesting.enabled": true,
-  "explorer.fileNesting.patterns": {
-    // 举个例子
-    "commitlint.config.ts": "commitlint.config.js"
-  }
+	"explorer.fileNesting.enabled": true,
+	"explorer.fileNesting.patterns": {
+		// 举个例子
+		"commitlint.config.ts": "commitlint.config.js"
+	}
 }
 ```

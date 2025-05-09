@@ -20,11 +20,11 @@
 
 ```ts
 class Number {
-  constructor(private value: number) {}
+	constructor(private value: number) {}
 
-  next(): Number {
-    return new Number(this.value + 1)
-  }
+	next(): Number {
+		return new Number(this.value + 1)
+	}
 }
 ```
 
@@ -42,18 +42,18 @@ class Number {
 
 ```ts
 class UserFactory {
-  static create(type) {
-    switch (type) {
-      case 'user':
-        return new User()
-      case 'customer':
-        return new Customer()
-      case 'admin':
-        return new Admin()
-      default:
-        throw new Exception('传递的用户类型错误。')
-    }
-  }
+	static create(type) {
+		switch (type) {
+			case 'user':
+				return new User()
+			case 'customer':
+				return new Customer()
+			case 'admin':
+				return new Admin()
+			default:
+				throw new Exception('传递的用户类型错误。')
+		}
+	}
 }
 ```
 

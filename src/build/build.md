@@ -26,15 +26,13 @@
 ✅ **推荐方案**：
 
 - [`rollup-plugin-esbuild`](https://github.com/egoist/rollup-plugin-esbuild)  
-  🌟 Vite 内部同款编译器，支持 Tree-Shaking
-  🌟 **快!** 可以代替 `rollup-plugin-typescript2`, `@rollup/plugin-typescript` 和 `rollup-plugin-terser`的集合
+  🌟 Vite 内部同款编译器，支持 Tree-Shaking 🌟 **快!** 可以代替 `rollup-plugin-typescript2`, `@rollup/plugin-typescript` 和 `rollup-plugin-terser`的集合
 
   ⚠️ rollup 在 Tree-Shaking vue(>=3.3) 时会报警告
 
   > "Fragment" is imported from external module "vue" but never used in "node_modules/.pnpm/vue@3.5.13_typescript@5.7.2/node_modules/vue/jsx-runtime/index.mjs"
 
-  📖 关于 tsx: esbuild 会自动拾取`tsconfig.json`配置或者[单独配置](https://github.com/egoist/rollup-plugin-esbuild?tab=readme-ov-file#usage)
-  ⚠️ vue tsx **不推荐**使用该方案
+  📖 关于 tsx: esbuild 会自动拾取`tsconfig.json`配置或者[单独配置](https://github.com/egoist/rollup-plugin-esbuild?tab=readme-ov-file#usage) ⚠️ vue tsx **不推荐**使用该方案
 
 ❌ **不推荐方案**：
 
@@ -52,14 +50,12 @@
 
 - [`@vitejs/plugin-vue`](https://github.com/vitejs/vite-plugin-vue)
 
-- [`unplugin-vue`](https://github.com/unplugin/unplugin-vue)
-  🔄 定期从@vitejs/plugin-vue 同步代码（用于 rollup）
+- [`unplugin-vue`](https://github.com/unplugin/unplugin-vue) 🔄 定期从@vitejs/plugin-vue 同步代码（用于 rollup）
 
 🚫 **已废弃方案**：
 
 - ~~`rollup-plugin-vue`~~  
-  ⛔ github 已经归档，不再维护，代替方案 `unplugin-vue`
-  ⚠️ 已知问题：[~~Vue 3.3 类型宏增强方案似乎未生效~~](https://blog.vuejs.org/posts/vue-3-3#imported-and-complex-types-support-in-macros)
+  ⛔ github 已经归档，不再维护，代替方案 `unplugin-vue` ⚠️ 已知问题：[~~Vue 3.3 类型宏增强方案似乎未生效~~](https://blog.vuejs.org/posts/vue-3-3#imported-and-complex-types-support-in-macros)
 
   ```ts
   import { type Foo } from 'anywhere'

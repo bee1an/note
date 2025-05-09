@@ -28,14 +28,14 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 ```json
 {
-  "explorer.fileNesting.enabled": true,
-  "explorer.fileNesting.expand": false,
-  "explorer.fileNesting.patterns": {
-    "tsconfig.json": "tsconfig.*.json",
-    "package.json": "package-lock.json, yarn.lock",
-    "env.d.ts": ".env.development, .env.production",
-    "vite.config.ts": "vitest.config.ts"
-  }
+	"explorer.fileNesting.enabled": true,
+	"explorer.fileNesting.expand": false,
+	"explorer.fileNesting.patterns": {
+		"tsconfig.json": "tsconfig.*.json",
+		"package.json": "package-lock.json, yarn.lock",
+		"env.d.ts": ".env.development, .env.production",
+		"vite.config.ts": "vitest.config.ts"
+	}
 }
 ```
 
