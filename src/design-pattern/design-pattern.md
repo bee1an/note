@@ -49,7 +49,7 @@
 - 状态模式（State Pattern）
 - 空对象模式（Null Object Pattern）
 - [策略模式（Strategy Pattern）](./strategy-pattern/strategy-pattern.md)
-- 模板模式（Template Pattern）
+- [模板模式（Template Pattern）](./template-pattern/template-pattern.md)
 - 访问者模式（Visitor Pattern）
 
 ## J2EE 模式
