@@ -86,5 +86,6 @@ export default defineConfig({
 			text: '最后更新时间'
 		}
 	},
-	lastUpdated: true
+	lastUpdated: true,
+	ignoreDeadLinks: ['./LICENSE']
 })
