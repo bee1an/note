@@ -28,8 +28,8 @@ abstract class Chess {
 }
 
 class BossChess extends Chess {
-	x: number
-	y: number
+	x!: number
+	y!: number
 
 	/**
 	 * 实现抽象步骤
@@ -48,8 +48,8 @@ class BossChess extends Chess {
 }
 
 class HorseChess extends Chess {
-	x: number
-	y: number
+	x!: number
+	y!: number
 
 	isMoveable(x: number, y: number) {
 		// 当前坐标是否可以移动

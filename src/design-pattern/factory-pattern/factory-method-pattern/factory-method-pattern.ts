@@ -42,7 +42,7 @@ class AliPay extends Pay {
 // 后续如果需要新增一个支付方法, 只需要新增创建者实现即可 // [!code warning]
 
 class Application {
-	payInstance: Pay
+	payInstance!: Pay
 
 	init(payMethod: string) {
 		if (payMethod === 'wxpay') {

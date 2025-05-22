@@ -22,7 +22,7 @@ interface Handler<Request = string, Result = string> {
  * 默认的链接行为可以在基处理程序类中实现。
  */
 abstract class AbstractHandler implements Handler {
-	private nextHandler: Handler
+	private nextHandler!: Handler
 
 	public setNext(handler: Handler): Handler {
 		this.nextHandler = handler

@@ -10,7 +10,8 @@
 		"build": "vitepress build",
 		"preview": "vitepress preview",
 		"runtsx": "pnpm tsx",
-		"prettier": "prettier . --write"
+		"prettier": "prettier . --write",
+		"typecheck": "tsc --noEmit"
 	},
 	"keywords": [
 		"note"
@@ -25,6 +26,7 @@
 		"lint-staged": "15.5.0",
 		"prettier": "3.5.3",
 		"tsx": "4.19.3",
+		"typescript": "5.8.3",
 		"vitepress": "1.6.3"
 	},
 	"lint-staged": {
