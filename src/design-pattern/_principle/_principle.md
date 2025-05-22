@@ -16,7 +16,7 @@
 
 使用多个隔离的接口，比使用单个接口要好
 
-## 5. 迪米特法则，又称最少知道原则（Demeter Principle）
+## 5. [迪米特法则，又称最少知道原则（Demeter Principle）](./demeter-principle/demeter-principle.md)
 
 最少知道原则是指：一个实体应当尽量少地与其他实体之间发生相互作用，使得系统功能模块相对独立。
 
