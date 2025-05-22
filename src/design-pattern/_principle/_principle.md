@@ -12,9 +12,9 @@
 
 针对接口编程，依赖于抽象而不依赖于具体
 
-## 4. 接口隔离原则（Interface Segregation Principle）
+## 4. [接口隔离原则（Interface Segregation Principle）](./interface-segregation-principle/interface-segregation-principle.md)
 
-这个原则的意思是：使用多个隔离的接口，比使用单个接口要好。它还有另外一个意思是：降低类之间的耦合度。由此可见，其实设计模式就是从大型软件架构出发、便于升级和维护的软件设计思想，它强调降低依赖，降低耦合。
+使用多个隔离的接口，比使用单个接口要好
 
 ## 5. 迪米特法则，又称最少知道原则（Demeter Principle）
 
