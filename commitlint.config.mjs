@@ -1,4 +1,18 @@
 import { defineConfig } from 'cz-git'
+import { execSync } from 'child_process'
+
+const scopeComplete = execSync('git status --porcelain || true')
+	.toString()
+	.trim()
+	.split('\n')
+	.find(
+		(r) =>
+			~r.indexOf('M  src') || ~r.indexOf('M src') || ~r.indexOf('A  src') || ~r.indexOf('A src')
+	)
+	?.replace(/(src\/)/g, 'src%%')
+	?.match(/src%%((\w|-)*)/)?.[1]
+
+console.log('scopeComplete', scopeComplete)
 
 /** @type {import('cz-git').UserConfig} */
 export default defineConfig({
@@ -98,6 +112,7 @@ export default defineConfig({
 		scopeOverrides: undefined,
 		defaultBody: '',
 		defaultIssues: '',
-		defaultSubject: ''
+		defaultSubject: '',
+		defaultScope: scopeComplete
 	}
 })
