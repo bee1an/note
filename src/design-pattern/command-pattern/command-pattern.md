@@ -1,7 +1,5 @@
 # 命令模式
 
-> [!WARNING] 这个模式, 理解的不是很好
-
 [参考文章](https://refactoringguru.cn/design-patterns/command)
 
 > 亦称: 动作、事务、Action、Transaction、Command
@@ -30,15 +28,14 @@
 
 我们还可以在命令模式中添加其他逻辑来实现撤销, 延迟执行等功能
 
+我对命令模式的理解: 如果请求中需要添加其他逻辑, 比如撤销, 延迟执行等功能, 那么就可以使用命令模式
+
 ## 使用场景
 
-- 解藕发送者和接收者
+- 需要通过操作来参数化对象
 - 如果你想要将操作放入队列中, 操作的执行或者远程执行操作, 可使用命令模式
-<!-- TODO -->
 - 可以结合备忘录模式来实现撤销操作
 
 ## 贴个代码
-
-<!-- TODO -->
 
 <<< @/src/design-pattern/command-pattern/command-pattern.ts
