@@ -57,9 +57,11 @@ const sidebar = generateDeepSidebar(fs.readdirSync(pathSrc), pathSrc)
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+	lang: 'zh-Hans',
 	base: '/yak-note/',
 	title: '随手记',
 	description: '记录遇到的任何东西',
+
 	themeConfig: {
 		// https://vitepress.dev/reference/default-theme-config
 		nav: [
@@ -76,7 +78,25 @@ export default defineConfig({
 			...sidebar
 		],
 		search: {
-			provider: 'local'
+			provider: 'local',
+			options: {
+				translations: {
+					button: {
+						buttonText: '搜索文档',
+						buttonAriaLabel: '搜索文档'
+					},
+					modal: {
+						noResultsText: '无法找到相关结果',
+						resetButtonTitle: '清除查询条件',
+						displayDetails: '切换显示类型',
+						footer: {
+							selectText: '选择',
+							navigateText: '切换',
+							closeText: '关闭'
+						}
+					}
+				}
+			}
 		},
 		docFooter: {
 			prev: '上一页',
@@ -84,7 +104,9 @@ export default defineConfig({
 		},
 		lastUpdated: {
 			text: '最后更新时间'
-		}
+		},
+		lightModeSwitchTitle: '切换浅色模式',
+		darkModeSwitchTitle: '切换深色模式'
 	},
 	lastUpdated: true,
 	ignoreDeadLinks: ['./LICENSE']
