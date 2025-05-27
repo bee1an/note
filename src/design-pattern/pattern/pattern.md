@@ -41,7 +41,7 @@
 - 空对象模式（Null Object Pattern）
 - [策略模式（Strategy Pattern）](./strategy/strategy.md)
 - [模板模式（Template Pattern）](./template/template.md)
-- 访问者模式（Visitor Pattern）
+- [访问者模式（Visitor Pattern）](./visitor/visitor.md)
 
 ## J2EE 模式
 
