@@ -81,7 +81,7 @@ class Caretaker {
 	}
 }
 
-class Clint {
+class Client {
 	constructor() {
 		const originator = new ConcreteOriginator()
 		const caretaker = new Caretaker()
@@ -100,4 +100,4 @@ class Clint {
 	}
 }
 
-new Clint()
+new Client()

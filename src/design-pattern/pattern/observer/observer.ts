@@ -47,7 +47,7 @@ class ConcreteSubscriber implements Subscriber {
 	}
 }
 
-class Clint {
+class Client {
 	constructor() {
 		const pulisher = new ConcretePulisher()
 
@@ -59,4 +59,4 @@ class Clint {
 	}
 }
 
-new Clint()
+new Client()

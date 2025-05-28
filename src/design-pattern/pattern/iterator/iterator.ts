@@ -116,7 +116,7 @@ class WxCoWorkerCollection extends WxCollectionImpl {
  * 客户端
  */
 
-class Clint {
+class Client {
 	constructor() {
 		const wxFriendCollection = new WxFriendCollection()
 		const wxCoWorkerCollection = new WxCoWorkerCollection()
@@ -133,4 +133,4 @@ class Clint {
 	}
 }
 
-new Clint()
+new Client()

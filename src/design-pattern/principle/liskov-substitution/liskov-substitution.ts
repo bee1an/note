@@ -40,7 +40,7 @@ class Square implements Quadrangle {
 	}
 }
 
-class Clint {
+class Client {
 	constructor() {
 		const r = new Rectangle(4, 5)
 		this.resize(r)
@@ -63,4 +63,4 @@ class Clint {
 	}
 }
 
-new Clint()
+new Client()
