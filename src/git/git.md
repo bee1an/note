@@ -4,6 +4,20 @@
 
 [有趣的 git 网站](https://learngitbranching.js.org/?locale=zh_CN)
 
+## 忽略 macos 的.DS_store 文件
+
+将 . DS_Store 加入全局的 .gitignore 文件，执行命令:
+
+```bash
+echo .DS_Store >> ~/.gitignore_global
+```
+
+将这个全局的 .gitignore 文件加入Git的全局config文件中，执行命令
+
+```bash
+git config --global core.excludesfile ~/.gitignore_global
+```
+
 ## 设置行尾序列为 LF
 
 ```bash
@@ -14,10 +28,21 @@ git config --global core.autocrlf false
 
 ```bash
 # 生成密钥（推荐使用更强的 ed25519 算法）
-ssh-keygen -t ed25519 -C "your_email@example.com"
+ssh-keygen -t ed25519 -C "beelan@yeah.net"
+
+# 如果你使用的是不支持 Ed25519 算法的旧系统，请使用以下命令：
+ssh-keygen -t rsa -b 4096 -C "beelan@yeah.net"
 ```
 
-密钥会生成在 `~/.ssh` 目录下, 分别是 `id_ed25519` 和 `id_ed25519.pub`
+密钥会生成在 `~/.ssh` 目录下, 分别是私钥 `id_ed25519` 和公钥 `id_ed25519.pub`
+
+```bash
+# 使用 cat 命令查看公钥
+cat ~/.ssh/id_ed25519.pub
+
+# 或者
+cat ~/.ssh/id_rsa.pub
+```
 
 私钥放在本地, 公钥放在 Git 平台, 二者匹配则可以操作仓库
 
