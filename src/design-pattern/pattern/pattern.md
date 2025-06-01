@@ -32,9 +32,9 @@
 
 - [责任链模式（Chain of Responsibility Pattern）](./chain-of-responsibility/chain-of-responsibility.md)
 - [命令模式（Command Pattern）](./command/command.md)
-- 解释器模式（Interpreter Pattern）
+- [解释器模式（Interpreter Pattern）](./interpreter/interpreter.md)
 - [迭代器模式（Iterator Pattern）](./iterator/iterator.md)
-- 中介者模式（Mediator Pattern）
+- [中介者模式（Mediator Pattern）](./mediator/mediator.md)
 - [备忘录模式（Memento Pattern）](./memento/memento.md)
 - [观察者模式（Observer Pattern）](./observer/observer.md)
 - 状态模式（State Pattern）
