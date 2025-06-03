@@ -57,18 +57,17 @@ const sidebar = generateDeepSidebar(fs.readdirSync(pathSrc), pathSrc)
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-	lang: 'zh-Hans',
-	base: '/yak-note/',
-	title: '随手记',
-	description: '记录遇到的任何东西',
+	base: '/note/',
+	title: '笔记',
+	description: '学而不思则罔，思而不学则殆。',
 
 	themeConfig: {
 		// https://vitepress.dev/reference/default-theme-config
 		nav: [
 			{ text: '首页', link: '/' },
-			{ text: '笔记页', link: '/src' }
+			{ text: '学', link: '/src' }
 		],
-		socialLinks: [{ icon: 'github', link: 'https://github.com/bee1an/yak-note' }],
+		socialLinks: [{ icon: 'github', link: 'https://github.com/bee1an/note' }],
 		sidebar: [
 			{
 				text: getMdTitle(path.join(pathSrc, 'index.md')),

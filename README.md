@@ -3,16 +3,16 @@
 </p>
 
 <h1 align="center">
-  随手记
+  笔记
 </h1>
 
 <p align="center">
- 记录在开发过程中遇到的任何东西
+ 学而不思则罔，思而不学则殆。
 </p>
 
 ## 在线访问
 
-GitHub Pages: <https://bee1an.github.io/yak-note/>
+GitHub Pages: <https://bee1an.github.io/note/>
 
 ## Licenses
 

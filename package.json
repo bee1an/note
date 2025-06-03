@@ -1,9 +1,9 @@
 {
 	"packageManager": "pnpm@9.12.2",
-	"name": "yak-note",
+	"name": "note",
 	"version": "1.0.0",
 	"description": "just a note",
-	"homepage": "https://bee1an.github.io/yak-note/",
+	"homepage": "https://bee1an.github.io/note/",
 	"scripts": {
 		"prepare": "husky",
 		"dev": "vitepress dev",
