@@ -37,7 +37,7 @@
 - [中介者模式（Mediator Pattern）](./mediator/mediator.md)
 - [备忘录模式（Memento Pattern）](./memento/memento.md)
 - [观察者模式（Observer Pattern）](./observer/observer.md)
-- 状态模式（State Pattern）
+- [状态模式（State Pattern）](./state/state.md)
 - 空对象模式（Null Object Pattern）
 - [策略模式（Strategy Pattern）](./strategy/strategy.md)
 - [模板模式（Template Pattern）](./template/template.md)
