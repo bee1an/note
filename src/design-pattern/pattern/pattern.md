@@ -24,7 +24,7 @@
 - [装饰器模式（Decorator Pattern）](./decorator/decorator.md)
 - [外观模式（Facade Pattern）](./facade/facade.md)
 - [享元模式（Flyweight Pattern）](./flyweight/flyweight.md)
-- 代理模式（Proxy Pattern）
+- [代理模式（Proxy Pattern）](./proxy/proxy.md)
 
 ## 行为型模式
 
