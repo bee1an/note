@@ -18,6 +18,7 @@ features:
   - icon: ⏳
     title: 正在学
     details: 设计模式
+    link: src/design-pattern/design-pattern.md
   - icon: ✨
     title: 作者
     details: bee1an
