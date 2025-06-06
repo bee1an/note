@@ -1,5 +1,17 @@
 # ✍️ 随手记
 
+## unocss 属性化预设
+
+前提条件开启 `presetWind3` 预设
+
+```ts
+import { defineConfig, presetAttributify, presetWind3 } from 'unocss'
+
+export default defineConfig({
+	presets: [presetWind3(), presetAttributify()]
+})
+```
+
 ## \_\_dirname
 
 在 `nodejs` 中, `__dirname` 是一个全局变量, 表示当前执行脚本所在的**目录**
