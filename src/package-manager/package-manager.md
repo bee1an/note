@@ -1,5 +1,16 @@
 # 🧩 关于包管理器
 
+## 给包改个名字
+
+```json
+// package.json
+"dependencies": {
+  "vite": "npm:rolldown-vite@^6.3.18"
+}
+```
+
+这样你的vite将会使用 `rolldown-vite`
+
 ## package tag
 
 npm publish 时，可以给包添加 tag，方便用户选择安装
