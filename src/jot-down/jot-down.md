@@ -1,5 +1,7 @@
 # ✍️ 随手记
 
+随便记一些没有分类的东西
+
 ## unocss 属性化预设
 
 前提条件开启 `presetWind3` 预设
@@ -10,20 +12,6 @@ import { defineConfig, presetAttributify, presetWind3 } from 'unocss'
 export default defineConfig({
 	presets: [presetWind3(), presetAttributify()]
 })
-```
-
-## \_\_dirname
-
-在 `nodejs` 中, `__dirname` 是一个全局变量, 表示当前执行脚本所在的**目录**
-
-如果使用 es module
-
-```js
-// es module
-import path from 'node:path'
-import { fileURLToPath } from 'node:url'
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
 ```
 
 ## tsx 模板引用
@@ -50,27 +38,3 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 	}
 }
 ```
-
-## node 模块解析规则
-
-在模块化中如果`require('...')`或者 `import '...'`会遵循以下规则
-
-**如果是一个文件路径 `require('./a')`**
-
-- 文件查找
-  - 根据路径查找 a 文件
-  - 没有 a 文件,则查找 a.js
-  - 没有 a.js,则查找 a.json
-- 文件查找没通过则进入文件夹查找
-  - 查找 a 文件夹下的 package.json 中定义的 main 字段
-  - 没有 main 字段,则查找 a 文件夹下的 index.js
-  - 没有 index.js,则查找 a 文件夹下的 index.json
-
-**如果不是一个文件路径**
-
-- 内置模块查找
-  - 查找 node 内置模块 a 文件
-- 内置模块未找到则进入第三方模块查找
-  - 查找 node_modules 下的 a 文件
-  - 没有 a 文件,则查找 a.js
-  - (遵循文件查找规则...)

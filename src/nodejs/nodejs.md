@@ -1,5 +1,43 @@
 # 🟡 关于 nodejs
 
+## node 模块解析规则
+
+在模块化中如果`require('...')`或者 `import '...'`会遵循以下规则
+
+**如果是一个文件路径 `require('./a')`**
+
+- 文件查找
+  - 根据路径查找 a 文件
+  - 没有 a 文件,则查找 a.js
+  - 没有 a.js,则查找 a.json
+- 文件查找没通过则进入文件夹查找
+  - 查找 a 文件夹下的 package.json 中定义的 main 字段
+  - 没有 main 字段,则查找 a 文件夹下的 index.js
+  - 没有 index.js,则查找 a 文件夹下的 index.json
+
+**如果不是一个文件路径**
+
+- 内置模块查找
+  - 查找 node 内置模块 a 文件
+- 内置模块未找到则进入第三方模块查找
+  - 查找 node_modules 下的 a 文件
+  - 没有 a 文件,则查找 a.js
+  - (遵循文件查找规则...)
+
+## \_\_dirname
+
+在 `nodejs` 中, `__dirname` 是一个全局变量, 表示当前执行脚本所在的**目录**
+
+如果使用 es module
+
+```js
+// es module
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+```
+
 ## [关于 node 钩子](https://nodejs.org/api/module.html#customization-hooks)
 
 node 可以在执行文件前后做一些事情
