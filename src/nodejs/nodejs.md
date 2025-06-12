@@ -1,5 +1,16 @@
 # 🟡 关于 nodejs
 
+## fast-glob
+
+解析一个字符串, 可以给他提供一个目录, 它会去匹配这个目录下的所有文件
+
+```js
+import fastGlob from 'fast-glob'
+const files = await fastGlob('**/*.js', { cwd: 'src' }) // 这样就返回src下的所有的js文件
+
+// 具体配置可以看文档
+```
+
 ## node 模块解析规则
 
 在模块化中如果`require('...')`或者 `import '...'`会遵循以下规则
