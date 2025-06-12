@@ -46,16 +46,6 @@ cat ~/.ssh/id_rsa.pub
 
 私钥放在本地, 公钥放在 Git 平台, 二者匹配则可以操作仓库
 
-## tag
-
-```bash
-git tag -a v1.0 -m "tag message" # -a 表示创建一个带注释的标签
-git tag -d v1.0 # 删除标签
-git push origin v1.0 # 推送标签到远程仓库
-git push origin --tags # 推送所有标签到远程仓库
-git push --follow-tags # 推送的时候带上标签
-```
-
 ## 本地仓库跟踪远程仓库
 
 ```bash
