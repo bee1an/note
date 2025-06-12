@@ -68,6 +68,8 @@ npm i --frozen-lockfile
 
 ## npm link 本地软链的指南 (pnpm)
 
+> [!WARNING] 实测没什么用, 不知道是不是monorepo的原因, 参考[pnpm link 本地软链的指南2](#pnpm-link-本地软链的指南2)
+
 [ ] 测试.d.ts 类型文件, 之前测试时未生效
 
 将本地代码链接到 npm 全局软链接, 可以通过这个软连接测试本地代码
@@ -117,3 +119,30 @@ npm i --frozen-lockfile
   ```bash
   pnpm root -g
   ```
+
+# pnpm link 本地软链的指南2
+
+为什么用pnpm, 因为npm对monorepo支持不友好
+
+如果只是把一个包挂到全局, 比如要测试cli命令, 那么可以使用pnpm link
+
+```bash
+# 进入需要挂载的包目录, 注意可能是打包后的
+cd ...
+pnpm link
+```
+
+如果要把一个包引入到另一个包使用
+
+```bash
+# 进入测试包, 不需要上一步!!!
+pnpm link <路径>
+# 然后这个软连接就会被挂载到node_modules下
+```
+
+删除的话就直接走删除包的逻辑
+
+```bash
+pnpm remove ...
+# !!!unlink没用
+```
