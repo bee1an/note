@@ -1,5 +1,7 @@
 # 类型安全的中介者模式
 
+> [!WARNING] 这个方法不行, 当个技巧看吧, 函数重载才是最佳实践
+
 [回顾一下中介者模式](../../design-pattern/pattern/mediator/mediator.md)
 
 中介者通过 `notify` 接受组件发送的消息
