@@ -17,8 +17,7 @@ features:
     details: 笔记为了便于理解参杂了大量的个人理解，可能不准确，仅供参考
   - icon: ⏳
     title: 正在学
-    details: 设计模式
-    link: src/design-pattern/design-pattern.md
+    details: anything
   - icon: ✨
     title: 作者
     details: bee1an
