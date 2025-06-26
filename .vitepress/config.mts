@@ -108,5 +108,6 @@ export default defineConfig({
 		darkModeSwitchTitle: '切换深色模式'
 	},
 	lastUpdated: true,
-	ignoreDeadLinks: ['./LICENSE']
+	ignoreDeadLinks: ['./LICENSE'],
+	markdown: { math: true }
 })
