@@ -28,7 +28,7 @@ dns(domain name system)是域名系统, 解决ip难记的问题
 
 ## 2. 三次握手
 
-[详情](./TCP/TCP.md#三次握手)
+[详情](../TCP/TCP.md#三次握手)
 
 ## 3. http请求
 
@@ -84,7 +84,7 @@ res.setHeader('Cache-Control', 'max-age=1000')
 
 ## 5. 四次挥手
 
-[详情](./TCP/TCP.md#四次挥手)
+[详情](../TCP/TCP.md#四次挥手)
 
 ## 6. dom解析
 
