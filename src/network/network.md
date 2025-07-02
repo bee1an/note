@@ -15,7 +15,7 @@ const sidebar = computed(() => theme.value.sidebar.find(item=>item.link.includes
 <div>
   <template v-for="(item, index) in sidebar">
     <p>
-      <a :href="'.' + item.link.match(/[^\/src\/network]*\/([^\/]+\/[^\/]+)(?=\.[^\/]+$)/)[0]">{{  item.text }}</a>
+      <a :href="item.link.split('/src/network/')[1].split('.md')[0]">{{  item.text }}</a>
     </p>
   </template>
 </div>
