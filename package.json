@@ -8,6 +8,7 @@
 		"prepare": "husky",
 		"dev": "vitepress dev",
 		"build": "vitepress build",
+		"build:netlify": "vitepress build --base /",
 		"preview": "vitepress preview",
 		"prettier": "prettier . --write",
 		"typecheck": "tsc --noEmit"

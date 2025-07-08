@@ -1,0 +1,12 @@
+
+[build]
+publish = ".vitepress/dist"
+command = "pnpm run build:netlify"
+
+[build.environment]
+NODE_VERSION = "23"
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
