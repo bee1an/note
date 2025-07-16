@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			const sendGet = async () => {
+				const res = await fetch('http://localhost:3000/api/getText')
+				const reader = res.body.getReader()
+
+				const textDecoder = new TextDecoder()
+				let str = ''
+				const total = res.headers.get('content-length')
+				;(async () => {
+					let cur = 0
+					while (1) {
+						const { done, value } = await reader.read()
+						if (done) {
+							break
+						}
+						cur += value.length
+						str += textDecoder.decode(value)
+						console.log(((cur / total) * 100).toFixed(2))
+					}
+
+					console.log('str', str)
+				})()
+			}
+			sendGet()
+
+			const sendPost = async () => {
+				const res = await fetch('http://localhost:3000/api/postApi', {
+					method: 'post',
+					headers: {
+						'Content-Type': 'application/json'
+					},
+					body: JSON.stringify({ name: 'bee' })
+				})
+				const data = await res.json()
+				console.log(data)
+			}
+
+			sendPost()
+		</script>
+	</body>
+</html>
