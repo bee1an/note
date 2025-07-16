@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<pre id="pre"></pre>
+
+		<script>
+			const pre = document.getElementById('pre')
+
+			const sse = new EventSource('http://localhost:3000/api/getText')
+
+			sse.addEventListener('message', (e) => {
+				pre.innerText += e.data
+			})
+		</script>
+	</body>
+</html>
