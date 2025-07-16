@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			const sendGet = () => {
+				const xhr = new XMLHttpRequest()
+				xhr.open('get', 'http://localhost:3000/api/getText')
+				xhr.send()
+				xhr.onreadystatechange = () => {
+					if (xhr.readyState === 4 && xhr.status === 200) {
+						console.log(xhr.responseText)
+					}
+				}
+
+				// 监听进度
+				xhr.addEventListener('progress', (e) => {
+					console.log(e.loaded / e.total)
+				})
+
+				// 取消请求
+				// xhr.abort()
+				// 监听取消
+				// xhr.addEventListener('abort', () => {
+				// 	console.log('取消请求')
+				// })
+
+				// 设置超时
+				// xhr.timeout = 1000
+				// xhr.addEventListener('timeout', () => {
+				// 	console.log('请求超时')
+				// })
+			}
+
+			/**
+			 * send post request
+			 */
+			const sendPost = () => {
+				const xhr = new XMLHttpRequest()
+				xhr.open('post', 'http://localhost:3000/api/postApi')
+				xhr.setRequestHeader('Content-Type', 'application/json')
+				xhr.send(JSON.stringify({ name: 'bee' }))
+				xhr.onreadystatechange = () => {
+					if (xhr.readyState === 4 && xhr.status === 200) {
+						console.log(xhr.responseText)
+					}
+				}
+			}
+
+			// 发送get请求
+			sendGet()
+
+			// 发送post请求
+			sendPost()
+		</script>
+	</body>
+</html>
