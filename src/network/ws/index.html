@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<ul id="ul"></ul>
+		<input type="text" id="ipt" />
+		<button id="btn">send</button>
+
+		<script>
+			const input = document.getElementById('ipt')
+			const button = document.getElementById('btn')
+			const ul = document.getElementById('ul')
+
+			const ws = new WebSocket('ws://localhost:8080')
+
+			// 连接成功回调
+			ws.addEventListener('open', () => {
+				console.log('open')
+			})
+
+			// 发送消息
+			button.addEventListener('click', () => {
+				ws.send(input.value)
+				input.value = ''
+			})
+
+			// 接受消息
+			ws.addEventListener('message', (e) => {
+				const li = document.createElement('li')
+				li.innerText = e.data
+				ul.appendChild(li)
+			})
+		</script>
+	</body>
+</html>
