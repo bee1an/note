@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			fetch('http://localhost:3000/api/login', {
+				method: 'post',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({ username: 'admin', password: '123456' })
+			})
+				.then((res) => res.json())
+				.then(({ token }) => {
+					if (token) {
+						fetch('http://localhost:3000/api/verify', {
+							headers: {
+								Authorization: `${token}`
+							}
+						}).then(async (data) => {
+							console.log(await data.text())
+						})
+					}
+				})
+		</script>
+	</body>
+</html>
