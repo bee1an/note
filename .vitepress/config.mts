@@ -20,7 +20,9 @@ const generateDeepSidebar = (files: string[], dirname: string, ...parents: strin
 			if (fs.statSync(fullPath).isDirectory()) {
 				const newFiles = fs.readdirSync(fullPath)
 
-				const sameNameFile = newFiles.find((_file) => _file.split('.')[0] === file)
+				const sameNameFile = newFiles.find(
+					(_file) => _file.split('.')[0] === file && _file.endsWith('.md')
+				)
 
 				const items = generateDeepSidebar(
 					newFiles.filter((f) => f !== sameNameFile),
