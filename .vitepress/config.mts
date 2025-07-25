@@ -38,7 +38,7 @@ const generateDeepSidebar = (files: string[], dirname: string, ...parents: strin
 					text = getMdTitle(path.join(fullPath, 'index.md'))
 				}
 
-				return { text, link, items }
+				return { text, link, items, collapsed: true }
 			}
 
 			if (!file.endsWith('.md') || file === 'index.md') {
@@ -104,8 +104,15 @@ export default defineConfig({
 		lastUpdated: {
 			text: '最后更新时间'
 		},
-		lightModeSwitchTitle: '切换浅色模式',
-		darkModeSwitchTitle: '切换深色模式'
+		outline: {
+			label: '页面导航'
+		},
+		langMenuLabel: '多语言',
+		returnToTopLabel: '回到顶部',
+		sidebarMenuLabel: '菜单',
+		darkModeSwitchLabel: '主题',
+		lightModeSwitchTitle: '切换到浅色模式',
+		darkModeSwitchTitle: '切换到深色模式'
 	},
 	lastUpdated: true,
 	ignoreDeadLinks: ['./LICENSE'],
