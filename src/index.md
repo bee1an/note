@@ -14,8 +14,8 @@ const sidebar = computed(() => theme.value.sidebar.slice(1, -1))
 
 <div :class="$style.wrapper">
   <template v-for="(item, index) in sidebar">
-    <p>
-      {{ index + 1 }}. <a :href="'.' + item.link.slice(4, -3)">{{  item.text }}</a>
+    <p :class="$style.paragraph">
+      {{ index + 1 }}.&nbsp;<a :href="'.' + item.link.slice(4, -3)" v-html="item.text"></a>
     </p>
   </template>
 </div>
@@ -25,5 +25,9 @@ const sidebar = computed(() => theme.value.sidebar.slice(1, -1))
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 1rem;
+  }
+
+  .paragraph {
+    display: flex;
   }
 </style>
